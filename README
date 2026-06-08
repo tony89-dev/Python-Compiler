@@ -1,6 +1,0 @@
-README:
-Parser i lexer wykonane przy użyciu biblioteki PLY (dostępna do instalacji w easy_install).
-Wersja 1.0 - java:
-rozszerzenia: brak
-
-uruchamianie: ./latte <plik źródłowy>
