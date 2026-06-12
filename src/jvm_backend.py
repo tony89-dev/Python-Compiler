@@ -266,7 +266,7 @@ class JVM_Backend:
 
     def emit_if_stmt(self, stmt):
         self.__label_counter += 1
-        # TODO: optimize goto after return
+        # TODO: optimizing goto after return
         true_label = 'LIFTRUE%d' % self.__label_counter
         false_label = 'LIFFALSE%d' % self.__label_counter
         end_label = 'LIFEND%d' % self.__label_counter

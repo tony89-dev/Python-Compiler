@@ -35,7 +35,7 @@ class LatteSemanticAnalyzer:
                     main must return value of type int, line: %d' %
                     main['LineNo'])
             return
-        # load built-ins:
+        # load built_ins:
         self.__functions.update(BUILTINS_INFO)
 
     def __push_env(self, function = None):
@@ -256,8 +256,7 @@ class LatteSemanticAnalyzer:
                     'expected: %s, got: %s, line: %d pos: %d - %d' % (statement['Name'],
                         var_type, expr_type, statement['LineNo'],  statement['StartPos'], statement['EndPos']))
                 return statement
-            #else:
-            #    get_var(self.__environments, statement)['Assigned'] = statement['Expr']
+         
             if self.__optimize > 0 and not self.__errors:
                 self.__optimizer.simplify_expression(statement, 'Expr')
         except (VariableUndeclared, InvalidExpression) as e:
